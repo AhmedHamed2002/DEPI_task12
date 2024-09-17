@@ -1,0 +1,91 @@
+/* ***************************************************** */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes move {
+    0%{
+        color: white;
+    }
+    50%{
+        color: goldenrod;
+    }
+    100%{
+        color: white;
+    }
+}
+/* ***************************************************** */
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-inline: 20px;
+    
+    section{
+        color: white;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        z-index: 1;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        padding: 20px;
+
+        h1{
+            font-size: 55px;
+            font-family: "Playwrite BE VLG", system-ui;
+        }
+        h1+p{
+            font-size: 40px;
+            font-family: "Grey Qo", cursive;
+            animation: move 2s linear infinite;
+        }
+        button{
+            border: none;
+            border: 1px solid white;
+            padding: 15px 30px;
+            border-radius: 20px;
+            background-color: transparent;
+            color: goldenrod;
+            font-size: 15px;
+            cursor: pointer;
+            margin-bottom: 30px;
+
+            &:hover{
+                background-color: white;
+                color: rgb(163, 140, 8);
+            }
+        }
+
+        div{
+            display: none;
+            background: transparent;
+            background-color: rgba(105, 107, 111, 0.266);
+            border-radius: 15px;
+            padding: 5px 10px;
+
+            p{
+                font-size: 20px;
+                color: #e0d3d3;
+            }
+        }
+    }
+}
+
